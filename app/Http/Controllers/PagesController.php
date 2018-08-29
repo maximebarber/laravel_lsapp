@@ -8,16 +8,26 @@ class PagesController extends Controller
 {
     public function index()
     {
-        return view('pages.index');
+        $title = 'Welcome to lsapp';
+        //first method
+        //return view('pages.index', compact('title'));
+        //second method
+        return view('pages.index')->with('title', $title);
     }
 
     public function about()
     {
-        return view('pages.about');
+        $title = 'About us';
+        return view('pages.about')->with('title', $title);
     }
 
     public function services()
     {
-        return view('pages.services');
+        $data = 
+        [
+            'title' => 'Services',
+            'services' => ['Web Design', 'Programming', 'CEO']
+        ];
+        return view('pages.services')->with($data);
     }
 }

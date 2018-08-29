@@ -1,19 +1,17 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <!-- Available in .env -->
-        <title>{{config('app.name', 'lol')}}</title>
+@section('content')
 
-    </head>
-    <body>
-        
-        <h1>Services</h1>
+    <h1>{{ $title }}</h1>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum illo odio minima officia ullam labore magni, tenetur assumenda provident, quis nostrum quas corporis enim molestias sunt sapiente voluptatum? Ullam, reprehenderit!</p>
+    @if (count($services) > 0)
 
-    </body>
-</html>
+        <ul class="list-group">
+        @foreach($services as $service)
+            <li class="list-group-item">{{ $service }}</li>
+        @endforeach
+        </ul>
+
+    @endif
+
+@endsection
