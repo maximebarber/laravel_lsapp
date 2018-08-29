@@ -11,7 +11,7 @@
     </head>
     <body>
         
-        <h1>About</h1>
+        <h1>Welcome to Laravel</h1>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum illo odio minima officia ullam labore magni, tenetur assumenda provident, quis nostrum quas corporis enim molestias sunt sapiente voluptatum? Ullam, reprehenderit!</p>
 
