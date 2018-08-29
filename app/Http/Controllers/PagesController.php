@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
     public function index()
     {
-        $title = 'Welcome to lsapp';
+        $title = 'Welcome to Lsapp';
         //first method
         //return view('pages.index', compact('title'));
         //second method

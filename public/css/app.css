@@ -10475,6 +10475,14 @@ a.text-dark:focus {
   margin-top: 3em !important;
 }
 
+.jumbotron {
+  text-align: center;
+}
+
+.btn {
+  margin: 1em;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
