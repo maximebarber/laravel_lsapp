@@ -10473,11 +10473,15 @@ a.text-dark:focus {
 
 .jumbotron {
   text-align: center;
+  border: 1px solid #1a1a1a;
 }
 
-.btn {
-  margin: 1em;
-  border: 1px solid black;
+.btn-outline-primary {
+  border: 1px solid #1a1a1a !important;
+}
+
+.btn-outline-danger {
+  border: 1px solid #d9534f !important;
 }
 
 .container {

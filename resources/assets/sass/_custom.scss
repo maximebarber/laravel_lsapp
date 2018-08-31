@@ -1,12 +1,17 @@
 .jumbotron
 {
     text-align: center;
+    border: 1px solid $primary;
 }
 
-.btn
+.btn-outline-primary
 {
-    margin: 1em;
-    border: 1px solid black;
+    border: 1px solid $primary !important;
+}
+
+.btn-outline-danger
+{
+    border: 1px solid $danger !important;
 }
 
 .container
