@@ -5,6 +5,7 @@
     <a href="/posts" class="btn btn-outline-primary">Go back</a><br><br>
 
     <h1>{{ $post->title }}</h1>
+    <img style="width:100%" src="/storage/cover_images/{{ $post->cover_image }}" alt="post-image"><br><br>
     <div>
         {!! $post->body !!}
     </div>
@@ -15,17 +16,21 @@
 
     <hr>
 
-    {{-- Edit and delete buttons (only visible if logged in --}}
+    {{-- Edit and delete buttons (only visible if authenticated --}}
     @if(!Auth::guest())
-    <a href="/posts/{{$post->id}}/edit" class="btn btn-outline-primary">Edit</a>
+        @if(Auth::user()->id == $post->user_id)
 
-    {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'float-right delete']) !!}
+            <a href="/posts/{{$post->id}}/edit" class="btn btn-outline-primary">Edit</a>
 
-        {{ Form::hidden('_method', 'DELETE') }}
+            {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'float-right delete']) !!}
 
-        {{ Form::submit('Delete', ['class' => 'btn btn-outline-danger']) }}
+                {{ Form::hidden('_method', 'DELETE') }}
 
-    {!! Form::close() !!}
+                {{ Form::submit('Delete', ['class' => 'btn btn-outline-danger']) }}
+
+            {!! Form::close() !!}
+
+        @endif
     @endif
 
 {{-- Does not work --}}
